@@ -2,6 +2,7 @@ import { __prod__ } from "./constants";
 import { Post } from "./entities/Post";
 import { MikroORM } from "@mikro-orm/postgresql";
 import { User } from "./entities/User";
+import { POSTGRES_PASSWORD } from "./endpoints.config";
 // import path from "path";
 
 export default {
@@ -16,5 +17,5 @@ export default {
 	type: "postgresql",
 	debug: !__prod__,
 	user: "postgres",
-	password: "munim",
+	password: POSTGRES_PASSWORD,
 } as Parameters<typeof MikroORM.init>[0];

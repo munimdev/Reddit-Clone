@@ -20,6 +20,7 @@ export class User {
 	@Property({ type: "text", unique: true })
 	username!: string;
 
+	// We don't want to expose the password to the client, so we don't add a @Field() here.
 	@Property({ type: "text" })
 	password!: string;
 }
